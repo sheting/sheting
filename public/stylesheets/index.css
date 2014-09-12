@@ -1,0 +1,25 @@
+.item-container{
+    position: relative;
+}
+#chinese-time,#hawaii-time,#rome-time,#sydeny-time{
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    color: #fff;
+}
+@media screen and (max-width: 1000px){
+    .container{
+        width: 100%;
+    }
+    .demo{
+        width: 90%;
+        clear: both;
+        margin-left: 5%;
+    }
+    .demo .item-container{
+        margin: 0 auto;
+    }
+    .left,.right{
+        float: none;
+    }
+}

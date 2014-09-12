@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>首页</title>
+
+    <link rel="stylesheet" href="/stylesheets/chop.css"><!--look like reset.css-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body  onLoad="javascript:GetTime();">
+    <!-- header start-->
+    <header>
+        <div class="header-container">
+            <a href="#" target="_blank"><img src="/images/item-thumbnail.png"></a>
+            <aside>
+                <h1>sheting</h1>
+                <h2>性别：未知&nbsp;&nbsp;&nbsp;&nbsp;爱好：未知</h2>
+                <p>我只是一名勤勤恳恳的程序媛。</p>
+                <a href="#" target="_blank" class="btn header-btn">喜欢</a>
+            </aside>
+        </div>
+    </header>
+    <!-- header end -->
+    <!-- container start -->
+    <div class="container clearfix">
+        <div class="demo left">
+            <div class="item-container">
+                <img src="/images/list6.jpg">
+                <div id="chinese-time"></div>
+                <div class="mask">
+                    <a href="#">Look Detail</a>
+                </div>
+            </div>
+            <h3><span>tech</span> 码农的觉悟</h3>
+            <p>不会表达的码农不是好老师</p>
+        </div>
+        <div class="demo right">
+            <div class="item-container">
+                <img src="/images/list8.jpg">
+                <div id="rome-time"></div>
+                <div class="mask">
+                    <a href="/blog">Look Detail</a>
+                </div>
+            </div>
+            <h3><span>daily</span> 生活分享</h3>
+            <p>生活中的自己才是最真实的</p>
+        </div>
+        <div class="demo left">
+            <div class="item-container">
+                <img src="/images/list12.jpg">
+                <div id="sydeny-time"></div>
+                <div class="mask">
+                    <a href="picture">Look Detail</a>
+                </div>
+            </div>
+            <h3><span>photo</span> 照片分享</h3>
+            <p>展示不一样的美</p>
+        </div>
+        <div class="demo right">
+            <div class="item-container">
+                <img src="images/list5.jpg">
+                <div id="hawaii-time"></div>
+                <div class="mask">
+                    <a href="music1">Look Detail</a>
+                </div>
+            </div>
+            <h3><span>music</span> 音乐分享</h3>
+            <p>秀出属于我们的歌</p>
+        </div>
+    </div>
+    <!-- container end -->
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/analytics.js"></script>
+    <script>
+        function GetTime() {
+            var dt = new Date();
+            var def = dt.getTimezoneOffset() / 60;
+            var gmt = (dt.getHours() + def);
+            var ending = ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds());
+            $("#chinese-time").html('北京时间:'+(IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds())));
+            var rome = check24(((gmt + 1) > 24) ? ((gmt + 1) - 24) : (gmt + 1));
+            $("#rome-time").html("罗马时间:"+(IfZero(rome) + ending));
+
+            var sdn = check24(((gmt + 10) > 24) ? ((gmt + 10) - 24) : (gmt + 10));
+            $("#sydeny-time").html("悉尼时间:"+(IfZero(sdn) + ending));
+
+
+            var haw = check24(((gmt + (24 - 10)) > 24) ? ((gmt + (24 - 10)) - 24) : (gmt + (24 - 10)));
+            $("#hawaii-time").html("夏威夷时间:"+(IfZero(haw) + ending));
+
+            setTimeout("GetTime()", 1000);
+        }
+
+        function IfZero(num) {
+            return ((num <= 9) ? ("0" + num) : num);
+        }
+
+        function check24(hour) {
+            return (hour >= 24) ? hour - 24 : hour;
+        }
+    </script>
+</body>
+</html>

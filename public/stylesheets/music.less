@@ -1,0 +1,86 @@
+.circle-color(@color:black){
+    border-color:@color;
+}
+.hover{
+    :hover{
+        
+    }
+}
+body {
+    background: url(../img/bg.jpg);
+    overflow: hidden;
+}
+#container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -180px;
+}
+.circle, .circle:after{
+    width: 140px;
+    height: 140px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 80px;
+    position: absolute;
+    display: block;
+}
+.blue{
+    .circle-color(blue);
+    left: 0;
+    top: 0;
+}
+.blue:after{
+    content: "";
+    .circle-color(blue);
+    border-bottom-color: transparent;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+}
+.yellow{
+    .circle-color(yellow);
+    left: 170px;
+    top: 0;
+}
+.yellow:after{
+    content: "";
+    .circle-color(yellow);
+    border-left-color: transparent;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+}
+.red{
+    .circle-color(red);
+    left: 340px;
+    top: 0;
+}
+.red:after{
+    content: "";
+    .circle-color(red);
+    border-left-color: transparent;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+}
+.green{
+    .circle-color(green);
+    left: 80px;
+    top: 80px;
+}
+.black{
+    .circle-color(black);
+    left: 250px;
+    top: 80px;
+}
+.black:after{
+    content: "";
+    .circle-color(black);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+}

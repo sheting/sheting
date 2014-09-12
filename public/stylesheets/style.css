@@ -1,0 +1,151 @@
+	body {
+		background-color: #fff;
+		font: 16px/1.5em Lato, "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+		color: #262626;
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+	header {
+		width: 100%;
+		background-color: #eee;
+	}
+	aside {
+		width: 700px;
+		height: 200px;
+		float: right;
+	}
+	h1 {
+		font-size: 2.4em;
+		height: 40px;
+		font-weight: 900;
+	}
+	h2 {
+		font-size: 1.2em;
+		font-weight: 400;
+		line-height: 40px;
+		height: 40px;
+		margin-bottom: 10px;
+	}
+	h3 {
+		font-size: 1.5em;
+		font-weight: 400;
+		line-height: 40px;
+		margin-top: 20px;
+	}
+	h3 span {
+		background: #d53b3b;
+		color: #fff;
+		padding: 5px;
+		font-size: 0.4em;
+		text-transform: uppercase;	
+		font-weight: 700;
+		vertical-align: bottom;
+	}	
+	p {
+		color: #666;
+		height: 50px;
+	}
+	aside p {
+		margin-bottom: 20px;
+	}
+	.header-container {
+		width: 1000px;
+		height: 200px;
+		margin: 0 auto;
+		padding: 30px 0px;
+	}
+	.btn {
+		padding: 10px 15px;
+		height: 20px;
+		line-height: 20px;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: 700;
+		color: #262626;
+		transition: all 0.125s ease-in-out 0s;
+		-moz-transition: all 0.125s ease-in-out 0s;
+		-webkit-transition: all 0.125s ease-in-out 0s;
+		-o-transition: all 0.125s ease-in-out 0s;
+		-ms-transition: all 0.125s ease-in-out 0s;
+	}
+	a.header-btn {
+		background-color: #5bc0de;
+		color: #fff;
+		
+		margin-right: 30px;
+	}
+	a.btn:hover {
+		color: #262626;
+		background-color: #fff;
+	}
+	.clearfix:before,
+ 	.clearfix:after {
+	content: " ";
+	display: table;
+	}
+
+	.clearfix:after {
+	clear: both;
+	}
+	.container {
+		width: 1000px;
+		margin: 0px auto 60px;
+	}
+	.demo {
+		width: 400px;
+		margin-top: 60px;
+		text-align: center;
+	}
+	.demo img {
+		height: 270px;
+		vertical-align: bottom;
+	}
+	.item-container {
+		width: 400px;
+		height: 270px;
+		overflow: hidden;
+		/*position: relative;*/
+		text-align: center;
+		cursor: default;
+	}
+	.item-container .mask {
+		width: 400px;
+		height: 270px;
+		opacity: 0;
+		overflow: visible;
+		box-sizing: border-box;
+		transition: all 0.3s ease-in-out;
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+	}
+	.item-container .mask a {
+		width: 400px;
+		height: 270px;
+		display: block;
+		color: #fff;
+		font-size: 1.4em;
+		font-weight: 700;
+		text-decoration: none;
+		line-height: 270px;
+		position:relative;
+		top: 0;
+		opacity: 0;
+		z-index: 9999;
+		background-color: rgba(0,0,0,0.7);
+		transition: opacity 0.3s 0s ease-in-out;
+	}
+	.item-container:hover .mask {
+		opacity: 1;
+	}
+	.item-container:hover .mask a {
+		opacity: 1;
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
