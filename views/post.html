@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+    <link href='/stylesheets/post.css' rel='stylesheet' type='text/css'>
+</head>
+<body id="permalink" class="">
+<div id="cover"></div>
+<header id="header" style="background: #eee;">
+    <div>
+        <a href="/">
+            <img src="/images/item-thumbnail.png" alt="sheting">
+        </a>
+        <h1><a href="/" style="color: #000;">sheting</a>&nbsp;&nbsp;&nbsp;<a href="/logout" style="color: #000;">exit</a>
+        </h1>
+        <div id="description">
+            my daily life
+        </div>
+    </div>
+    <nav id="navigation">
+        <li><a href="/ask">首页</a>
+        </li>
+        <li><a href="/submit">音乐榜</a>
+        </li>
+        <li><a href="/archive">enjoy生活</a>
+        </li>
+        <li><a href="/random">图片欣赏</a>
+        </li>
+    </nav>
+</header>
+<section id="posts-container">
+    <div id="loading"></div>
+    <div id="posts" class="">
+        <article id="" class="entry">
+
+            <div class="text">
+                <h2 class="title">Submit <%= success%><%= error%></h2>
+                <iframe frameborder="0" scrolling="no" width="100%" height="530" id="submit_form" src="/postIFrame" style="background-color:transparent; overflow:hidden;"></iframe>
+            </div>
+        </article>
+    </div>
+    <nav id="pagination">
+    </nav>
+</section>
+</div>
+</body>
+
+</html>

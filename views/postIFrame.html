@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Avenue: Submit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Post anything (from anywhere!), customize everything, and find and follow what you love.  Create your own Tumblr blog today." id="description">
+    <meta name="keywords" content="tumblelog, blog, tumblog, tumbler, tumblr, tlog, microblog" id="keywords">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="stylesheet" media="screen" href="https://secure.assets.tumblr.com/assets/styles/submit.css?_v=3f3659e31277e2ff11e0fb323566d6e5">
+    <script>
+    var Tumblr = Tumblr || {};
+    Tumblr.ORIGIN = 'theme-avenue.tumblr.com';
+    Tumblr.BASE_HREF = '/submit_form/' + Tumblr.ORIGIN;
+    </script>
+    <script>
+    require = function r(t, n, e) {
+        function o(i, f) {
+            if (!n[i]) {
+                if (!t[i]) {
+                    var c = "function" == typeof require && require;
+                    if (!f && c) return c(i, !0);
+                    if (u) return u(i, !0);
+                    throw new Error("Cannot find module '" + i + "'")
+                }
+                var a = n[i] = {
+                    exports: {}
+                };
+                t[i][0].call(a.exports, function(r) {
+                    var n = t[i][1][r];
+                    return o(n ? n : r)
+                }, a, a.exports, r, t, n, e)
+            }
+            return n[i].exports
+        }
+        for (var u = "function" == typeof require && require, i = 0; i < e.length; i++) o(e[i]);
+        return o
+    }({
+        flags: [
+            function(r, t) {
+                t.exports = r("WdD/PM")
+            }, {}
+        ],
+        "WdD/PM": [
+            function(r, t) {
+                "use strict";
+
+                function n(r) {
+                    return "function" == typeof r
+                }
+
+                function e(r) {
+                    return "undefined" == typeof r
+                }
+
+                function o(r) {
+                    var t, e;
+                    if (!n(r)) throw new TypeError;
+                    return function() {
+                        return t ? e : (t = !0, e = r.apply(this, arguments), r = null, e)
+                    }
+                }
+
+                function u(r) {
+                    return !(!c || !c[r])
+                }
+
+                function i(r) {
+                    var t = u(r);
+                    return t ? function o(r) {
+                        var u = n(r) ? r.call(this, t) : r;
+                        return e(u) ? o : u
+                    } : function i(r, o) {
+                        var u = n(o) ? o.call(this, t) : o;
+                        return e(u) ? i : u
+                    }
+                }
+
+                function f(r) {
+                    try {
+                        c = JSON.parse(p(r))
+                    } catch (t) {
+                        c = {}
+                    }
+                }
+                var c, a = Object.prototype,
+                    p = (a.toString, n(window.atob) ? window.atob : function(r) {
+                        var t, n, e, o, u = {},
+                            i = 0,
+                            f = 0,
+                            c = "",
+                            a = String.fromCharCode,
+                            p = r.length,
+                            s = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+                        for (t = 0; 64 > t; t++) u[s.charAt(t)] = t;
+                        for (e = 0; p > e; e++)
+                            for (n = u[r.charAt(e)], i = (i << 6) + n, f += 6; f >= 8;)((o = i >>> (f -= 8) & 255) || p - 2 > e) && (c += a(o));
+                        return c
+                    });
+                t.exports = i, t.exports.bool = u, t.exports.setup = o(f)
+            }, {}
+        ]
+    }, {}, []);
+    </script>
+    <script>
+    (function(exports, store) {
+        'use strict';
+        var flags = require('flags');
+        flags.setup(store);
+        exports.Flags = flags; // Legacy Tumblr.Flags
+    })((this.Tumblr || (this.Tumblr = {})), "eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwic2VjdXJlX2Zvcm1fa2V5Ijp0cnVlLCJzZWN1cmVfZm9ybV9rZXlfZnVsbHlfb24iOnRydWUsInR1bWJsZWxvZ19wb3BvdmVyIjp0cnVlLCJlbmFibGVfY2FwdHVyZV9qcyI6dHJ1ZSwibmV3X3Bvc3RfZm9ybXMiOnRydWUsInRhYmxldF9iYW5uZXJfYWN0aXZlIjp0cnVlLCJtb2JpbGVfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwidXNlcl9tZW50aW9ucyI6dHJ1ZSwiaHRtbDVfYXVkaW9fcGxheWVyIjp0cnVlLCJwb3BvdmVyX3JlY29tbWVuZGF0aW9ucyI6dHJ1ZSwicG9wdGljYV90dW1ibGVsb2dfcG9wb3ZlcnMiOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJnbG9iYWxfcmVzZXRfYW5kX3N0eWxlcyI6dHJ1ZSwiZG9udF9jYXN0X2pzX2ZvbGxvd3MiOnRydWUsImtleWNvbW1hbmRfZ3VpZGUiOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2VwaGVtZXJhbF9sb2ciOnRydWUsImxvZ19sYWR5Ijp0cnVlLCJjc2xvZ2dlcl9qcyI6dHJ1ZX0=");
+    </script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/client/prod/scripts/vendor/index.js?_v=ecb9caf1ab144ad161dcefe7f2c92883"></script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/assets/scripts/polyfills.js?_v=cfe98c810e69c8c24ffa448c197f8723"></script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/assets/scripts/tumblelog_submission_form.js?_v=8eb757d8d3639c2abd1b7228bbcf8032"></script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/assets/scripts/tumblr_editor.js?_v=b77a10a6621e99fbbdfed1e09206e2f8"></script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/assets/scripts/polyfills/placeholders.js?_v=db66132096e7afb772de55a8170b4ae3"></script>
+    <script type="text/javascript" language="javascript" src="https://secure.assets.tumblr.com/languages/strings/en_US.js?1342"></script>
+    <script crossorigin="anonymous" src="https://secure.assets.tumblr.com/assets/scripts/vendor/tiny_mce_3_5_10/tiny_mce.js?_v=0d88fc8b10be4f6742a3161825dfac31"></script>
+    <script type="text/javascript" language="javascript" src="/submit_form_js/CZ52kUopP26j7JTd1bpaOOjLDQ/1410698806/submit.js"></script>
+</head>
+
+<body onload="if (window.jk == undefined) { document.getElementById('container').style.display = 'none'; document.getElementById('error_no_jk').style.display = 'block'; }">
+    <div id="error_no_javascript">
+        <div class="copy_container">
+            <div class="copy_inner_container">
+                <div class="header">Sorry!</div>
+                <div class="copy"><a href="https://www.google.com/adsense/support/bin/answer.py?hl=en&amp;answer=12654">Javascript</a> is required to use this feature.</div>
+            </div>
+        </div>
+    </div>
+    <div id="error_no_jk" style="display:none;">
+        <div class="copy_container">
+            <div class="copy_inner_container">
+                <div class="header">Error</div>
+                <div class="copy">Sorry, we seem to be having technical trouble. Please try again later.</div>
+            </div>
+        </div>
+    </div>
+    <noscript>
+        <style type="text/css">
+        .l-container {
+            display: none;
+        }
+        #error_no_javascript {
+            display: block;
+        }
+        </style>
+    </noscript>
+    <div class="l-container">
+        <form action="doPost" enctype="multipart/form-data" method="post" class="regular_post">
+            <div class="header clearfix">
+                <div id="post_select" class="multi">
+                    <span class="txt">Text</span>
+                    <div id="post_options">
+                        <div class="popover popover_menu">
+                            <div class="popover_inner">
+                                <ul>
+                                    <li>
+                                        <div class="option selected" data-option-value="text">Text</div>
+                                    </li>
+                                    <li>
+                                        <div class="option " data-option-value="photo">Photo</div>
+                                    </li>
+                                    <li>
+                                        <div class="option " data-option-value="link">Link</div>
+                                    </li>
+                                    <li>
+                                        <div class="option " data-option-value="quote">Quote</div>
+                                    </li>
+                                    <li>
+                                        <div class="option " data-option-value="video">Video</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_info" style="float:left;">
+                    <ul class="anonymous_fields">
+                        <!-- <li style="margin-left:10px;">
+                            <input type="text" placeholder="Name (required)" title="Name (required)" maxlength="25" name="anonymous_name" id="anonymous_name" class="borderless">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Email (required)" title="Email (required)" maxlength="100" name="anonymous_email" id="anonymous_email" class="borderless">
+                        </li> -->
+                        <!--<li>标签:</li>&lt;!&ndash; sytle="padding:3px 5px" &ndash;&gt;-->
+                        <li>
+                            <input type="text" placeholder="可添加标签;标签之间请用“,”隔开" title="标签" name="tags" id="anonymous_name" class="borderless" style="width:350px;margin-left:10px;">
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div id="form_container">
+                <!-- <input type="hidden" name="post_type" id="post_type" value="regular">
+                <input type="hidden" name="editor_type" id="post_editor_type" value="rich">
+                <input type="hidden" id="post_one_is_rich_text" name="is_rich_text[one]" value="0">
+                <input type="hidden" id="post_two_is_rich_text" name="is_rich_text[two]" value="0">
+                <input type="hidden" id="post_three_is_rich_text" name="is_rich_text[three]" value="0">
+                <div id="comment_form">
+                    <div>Leave a comment</div>
+                    <label for="comment_name">Name</label>
+                    <input type="text" id="comment_name" name="comment_name" />
+                    <label for="comment_url">URL</label>
+                    <input type="text" id="comment_url" name="comment_url" />
+                    <label for="comment_body">Comment</label>
+                    <textarea id="comment_body" name="comment_body"></textarea>
+                    <input type="submit" value="Submit comment" />
+                </div> -->
+                <script type="text/javascript">
+                var xi = 'inp';
+                document.write(
+                    '<' + xi + 'ut type="hidden" name="jk" value="' + jk() + '"/>' +
+                    '<' + xi + 'ut type="hidden" name="jkt" value="coopxtgpMTQxMDY5ODgwNg"/>'
+                );
+                </script>
+                <div class="input_wrapper">
+                    <input class="borderless full optional title" placeholder="Title" autocomplete="off" id="post_one" name="title" type="text" value="" />
+                    <input type="hidden" name="userId" value="'+<%=user.username%> +'" />
+                </div>
+                <div class="textarea_wrapper">
+                    <textarea class="borderless full no_resize" autofocus="true" id="post_two" name="content"></textarea>
+                </div>
+            </div>
+            <div class="footer clearfix">
+                <!-- <div class="confirm_tos_wrapper">
+                    <input type="checkbox" name="confirm_tos" id="confirm_tos">
+                    <label class="confirm_tos" for="confirm_tos">I accept the <a href="http://theme-avenue.tumblr.com/terms_of_submission" target="_blank">Terms of Submission</a>
+                    </label>
+                </div> -->
+                <input type="submit" id="submit_button" class="chrome blue" value="Submit"/>
+            </div>
+        </form>
+        <ul id="errors" style="display: none"></ul>
+    </div>
+    <script>
+    var __ = (function() {
+
+        var translation = {
+            "You must accept the Terms of Submission.": 'You must accept the Terms of Submission.',
+            "Post cannot be empty.": 'Post cannot be empty.',
+            "Please select an image file to upload.": 'Please select an image file to upload.',
+            "Please enter your name.": 'Please enter your name.',
+            "You must enter a valid email address.": 'You must enter a valid email address.'
+        };
+
+        return function(string) {
+            return translation[string] || string;
+        };
+
+    })();
+    </script>
+    <div data-token="post-plexi" class="plexi"></div>
+    <script id="tinymce_image_popover" type="text/template">
+    < div class = "popover popover_gradient popover_form popover_link" > < div class = "popover_inner" > < form id = "insert_image_form" > < div class = "input_group_wrapper" > < input class = "image_src"
+    name = "src"
+    type = "text"
+    placeholder = "Image URL" / > < input class = "image_alt"
+    name = "alt"
+    type = "text"
+    placeholder = "Description (optional)" / > < /div><button type="submit" class="chrome" data-updatelabel="Update">Insert</button > < /form></div > < /div>
+    </script>
+    <script id="tinymce_link_popover" type="text/template">
+    < div class = "popover popover_gradient popover_form popover_link" > < div class = "popover_inner" > < form id = "link_form" > < div class = "input_group_wrapper" > < input class = "link_url"
+    name = "url"
+    type = "text"
+    placeholder = "Link URL" / > < input class = "link_title"
+    name = "title"
+    type = "text"
+    placeholder = "Title (optional)" / > < /div><label class="checkbox_label"><input class="link_target" name="target" type="checkbox" value="" / > Open link in a new window < /label><button type="submit" class="chrome" data-updatelabel="Update link">Insert link</button > < /form></div > < /div>
+    </script>
+    <script id="tinymce_source_editor" type="text/template">
+    < div id = "source_editor" > < div data - token = "source-editor-plexi"
+    class = "plexi active show" > < /div><div id="ace_source_editor"></div > < /div>
+    </script>
+</body>
+
+</html>

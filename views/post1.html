@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发表</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration:none;
+        }
+        img{
+            border:0;
+        }
+        #container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .login-img{
+            width: 1360px;
+            height: 640px;
+
+        }
+        #reg_page{
+            position: absolute;
+            left: 30%;
+            top: 20%;
+        }
+        #frm_reg{
+            width: 800px;
+            border: 1px solid #cccccc;
+        }
+        th{
+            color:#010;
+            font-size: 16px;
+        }
+        input{
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <div id="content">
+        <a href="#"><img src="/images/login-bg.jpg" class="login-img" alt="logo"></a>
+        <div class="MainForm" id="reg_page">
+            <form id="frm_reg" method="POST" enctype="multipart/form-data" action="doPost">
+                <table cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr id="tr_email">
+                        <th nowrap="nowrap">标题:</th>
+                        <td>
+                            <input name="email" id="f_email" class="TEXT" style="width: 200px;" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>标签:</th>
+                        <td><input name="tag" id="f_tags" maxlength="20" class="TEXT" style="width: 150px;" type="text">
+                            <span id="name_msg">多个标签请以","相隔</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>内容:</th>
+                        <td><input name="pwd" id="pwd" class="TEXT" style="width: 150px;" type="password">
+                        </td>
+                    </tr>
+                    <tr id="user_pic">
+                        <th>上传头像：</th>
+                        <td><input name="user_pic" id="f_pic" style="width: 150px;" type="file">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>
+                        <input value=" 提交 " class="button" type="submit">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
