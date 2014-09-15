@@ -15,17 +15,26 @@ exports.picture = function(req, res){
 exports.blog = function(req, res){
     res.render('blog');
 };
-
-
-exports.signin = function(req, res){
-    res.render('signin',{
-        user:null,
+exports.post = function(req, res){
+    res.render('post',{
+        user:req.session.loginUser,
+        success:req.flash('success').toString(),
         error: req.flash('error').toString()
     });
 };
-exports.createBlog = function(req,res){
-    res.render('createBlog',{
-        user:null
+
+exports.signin = function(req, res){
+    res.render('signin',{
+        error: req.flash('error').toString(),
+        success: req.flash('success').toString()
+
+    });
+};
+exports.signup = function(req, res){
+    res.render('signup',{
+        error: req.flash('error').toString(),
+        success: req.flash('success').toString()
+
     });
 };
 exports.logout = function(req,res){
@@ -33,9 +42,8 @@ exports.logout = function(req,res){
     req.flash('success','登出成功');
     res.redirect('/');
 };
-exports.signup = function(req, res){
-    res.render('signup',{
-        user:null,
-        error: req.flash('error').toString()
+exports.postIFrame = function(req,res){
+    res.render('postIFrame',{
+        user:req.session.loginUser
     });
 };

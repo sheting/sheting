@@ -9,6 +9,12 @@
     "express": "3.5.0",
     "ejs": "*",
     "less": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "connect-flash":"*",
+    "static-favicon": "*",
+    "morgan": "*",
+    "cookie-parser": "*",
+    "body-parser": "*",
+    "debug": "*"
   }
 }

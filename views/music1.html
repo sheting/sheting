@@ -25,7 +25,7 @@
                         <!--<a href="index.html" id="shrIcon" class="shrIcon" style="opacity: 0.5;"></a>-->
                     <!--</p>-->
                     <audio id="audio" autoplay="autoplay" style="width:200px;position: absolute;top: 240px;left:50px;">
-                        <source class="audio-one" src="/images/music/musics/5.mp3" type="audio/mpeg">
+                        <source class="audio-one" src="/images/music/musics/4.mp3" type="audio/mpeg">
                         Your browser does not support the audio tag.
                     </audio>
                 </div>
@@ -49,24 +49,26 @@
     <script src="/javascripts/jquery-1.10.2.min.js"></script>
     <script>
         (function(){
+            $('.audio-one').attr('src',"/images/music/musics/4.mp3");
             var arr = [];
             var reg = /.+(\d+).+/;
             for(var i = 0;i<15;i++){
                 arr.push("/images/music/musics/"+(i+1)+".mp3");
             }
-            console.log(arr);
+//            console.log(arr);
             $('#playerNext').click(function(){
                 var str = $('.audio-one').attr('src');
-                console.log(str);
+//                console.log(str);
                 var newArr = reg.exec(str);
-                console.log(newArr);
+//                console.log(newArr);
                 var newNum = parseInt(newArr[1]);
-                console.log(newNum);//5
+//                console.log(newNum);//5
                 if(newNum == 15){
                     newNum = 0;
                 }
-                console.log(arr[newNum]);
-                $('.audio-one').attr('src',arr[newNum]);
+                window.location.reload();
+//                console.log(arr[newNum]);
+//                $('.audio-one').attr('src',arr[newNum]);
             });
         })();
 
